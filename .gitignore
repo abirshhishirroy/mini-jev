@@ -23,4 +23,4 @@ data/*.py
 *yml.lock
 
 # Keep the samples!
-!data/samples/*.jsonl
+!data/samples/*.jsonlsrc/
