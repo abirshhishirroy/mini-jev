@@ -1,0 +1,17 @@
+sync:
+  mini-jev-gpu:
+    alpha: "/coding/coding_projects/mini-jev"
+    beta: "root@<ip>:port:/workspace/mini-jev"
+    mode: "one-way-replica"
+    ignore:
+      vcs: true
+      paths:
+        - ".venv/"
+        - "__pycache__/"
+        - "*.pyc"
+        - "wandb/"
+        - "data/synthetic/"
+        - "checkpointssss"
+        - "data/adapters/"
+        - "data/seeds/"
+        - "data/noul/"

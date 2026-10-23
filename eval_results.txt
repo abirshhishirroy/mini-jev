@@ -1,0 +1,33 @@
+[env] device=cuda
+[lora] re-injected into last 4 blocks, +0.205 M
+[load] head from checkpoints/head_best.pt
+[load] temperature T = 1.0389
+[tok] pre-tokenizing 1985 examples (max_len=1536) ...
+[tok] done. len min=80 max=627 mean=191 p95=377
+[data] test n=1985
+
+=== Mini-Jev results ===
+overall accuracy: 0.8338  (n=1985)
+latency: p50=23.95ms  p95=45.28ms  mean=28.58ms
+
+task                     n     acc    conf
+context_filter         300  0.6767  0.6669
+context_filter_noul    300  0.7100  0.7128
+hallucination          300  0.7667  0.6639
+query_router           205  1.0000  0.9981
+safety_gate            298  0.9732  0.9707
+safety_gate_noul       299  0.9398  0.9564
+tool_router            283  0.8233  0.8886
+
+[llm] running openai/gpt-4o-mini baseline on 1985 examples
+[llm] openai/gpt-4o-mini accuracy: 0.7300
+[llm] total wall time: 117.8s  (59.3ms/example)
+
+task                   llm_acc   jev_acc
+context_filter          0.5567    0.6767
+context_filter_noul     0.5800    0.7100
+hallucination           0.6100    0.7667
+query_router            0.8780    1.0000
+safety_gate             0.7819    0.9732
+safety_gate_noul        0.8629    0.9398
+tool_router             0.8975    0.8233

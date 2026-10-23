@@ -1,0 +1,26 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env 
+
+# Checkpoints
+checkpoints/
+
+#custom files
+data/multitask/*.jsonl
+data/synthetic/
+data/adapters/
+data/noul/
+data/seeds/
+data/*.py
+*yml.lock
+
+# Keep the samples!
+!data/samples/*.jsonl
